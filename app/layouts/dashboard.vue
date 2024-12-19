@@ -32,6 +32,15 @@ const links = [{
     shortcuts: ['G', 'U']
   }
 }, {
+  id: 'agents',
+  label: 'Agents',
+  icon: 'i-heroicons-user-group',
+  to: '/dashboard/agents',
+  tooltip: {
+    text: 'Agents',
+    shortcuts: ['G', 'A']
+  }
+}, {
   id: 'settings',
   label: 'Settings',
   to: '/dashboard/settings',

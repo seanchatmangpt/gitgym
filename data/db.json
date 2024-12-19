@@ -1,0 +1,57 @@
+{
+  "agents": [
+    {
+      "id": "1",
+      "name": "Agent Alpha",
+      "role": "Support",
+      "description": "Handles customer support tasks.",
+      "iconType": "chat",
+      "skills": [
+        "Communication",
+        "Problem Solving"
+      ],
+      "isActive": true,
+      "metrics": {
+        "tasks_completed": 120,
+        "success_rate": 95.5,
+        "average_response_time": "30s"
+      }
+    },
+    {
+      "id": "2",
+      "name": "Agent Beta",
+      "role": "Developer",
+      "description": "Handles code-related tasks.",
+      "iconType": "code",
+      "skills": [
+        "JavaScript",
+        "Vue.js"
+      ],
+      "isActive": true,
+      "metrics": {
+        "tasks_completed": 80,
+        "success_rate": 88.7,
+        "average_response_time": "45s"
+      }
+    },
+    {
+      "id": "41a23b6a-77d8-4b2a-82b3-8cc561a7c194",
+      "name": "THX microchip",
+      "role": "index quantifying",
+      "description": "The PNG array is down, hack the primary program so we can bypass the SQL circuit!",
+      "iconType": "code",
+      "skills": [
+        "JavaScript",
+        "React",
+        "Communication",
+        "Node.js"
+      ],
+      "isActive": true,
+      "metrics": {
+        "tasks_completed": 317,
+        "success_rate": 84.5,
+        "average_response_time": "112s"
+      }
+    }
+  ]
+}
