@@ -10,7 +10,8 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxthq/studio',
     '@vueuse/nuxt',
-    'nuxt-og-image'
+    'nuxt-og-image',
+    '@nuxt/devtools'
   ],
 
   hooks: {
@@ -33,7 +34,17 @@ export default defineNuxtConfig({
         '/docs'
       ],
       crawlLinks: true
-    }
+    },
+    routeRules: {
+      '/api/n8n/**': {
+        proxy: 'http://localhost:5678/api/v1/**',
+        cors: true,
+        headers: {
+          'access-control-allow-origin': '*',
+          'access-control-allow-methods': 'GET, POST, PUT, DELETE, OPTIONS',
+        },
+      },
+    },
   },
 
   routeRules: {
@@ -62,5 +73,5 @@ export default defineNuxtConfig({
     }
   },
 
-  compatibilityDate: '2024-07-11'
+  compatibilityDate: '2024-07-11',
 })

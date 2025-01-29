@@ -1,0 +1,74 @@
+### Base URL and API Key
+# Define base URL and API key for reuse
+
+### Retrieve all users
+GET {{base_url}}/users?limit=100&includeRole=true
+Accept: application/json
+X-N8N-API-KEY: {{api_key}}
+
+###
+
+### Retrieve all workflows
+  GET {{base_url}}/workflows
+Accept: application/json
+x-n8n-api-key: {{api_key}}
+
+###
+
+### Retrieve a specific workflow by ID
+GET {{base_url}}/workflows/1
+Accept: application/json
+X-N8N-API-KEY: {{api_key}}
+
+###
+
+### List all executions
+GET {{base_url}}/executions
+Accept: application/json
+X-N8N-API-KEY: {{api_key}}
+
+###
+
+### Retrieve a specific execution by ID
+GET {{base_url}}/executions/1
+Accept: application/json
+X-N8N-API-KEY: {{api_key}}
+
+###
+
+### Create a new workflow
+POST {{base_url}}/workflows
+Content-Type: application/json
+X-N8N-API-KEY: {{api_key}}
+
+{
+  "name": "New Workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [240, 300]
+    }
+  ],
+  "connections": {}
+}
+
+###
+
+### Retrieve all tags
+GET {{base_url}}/tags
+Accept: application/json
+X-N8N-API-KEY: {{api_key}}
+
+###
+
+### Create a new tag
+POST {{base_url}}/tags
+Content-Type: application/json
+X-N8N-API-KEY: {{api_key}}
+
+{
+  "name": "example-tag"
+}

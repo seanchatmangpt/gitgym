@@ -1,0 +1,15 @@
+version: '3'
+services:
+  n8n:
+    image: n8nio/n8n
+    ports:
+      - "5678:5678"
+    volumes:
+      - ~/.n8n:/home/node/.n8n
+    environment:
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=your_username
+      - N8N_BASIC_AUTH_PASSWORD=your_password
+      - N8N_SECURITY_HEADER_DISABLE_CORS=true
+      - N8N_TOKEN=eW91cl91c2VybmFtZTp5b3VyX3Bhc3N3b3Jk
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true

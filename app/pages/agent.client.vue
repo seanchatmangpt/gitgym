@@ -125,9 +125,18 @@ const items = row => [
 ]
 
 onMounted(fetchAgents);
+
+
+const commands = {
+  "add *item": (item) => console.log(`Adding item: ${item}`),
+  "remove *item": (item) => console.log(`Removing item: ${item}`),
+};
+
+const { isListening } = useVoiceCommands(commands);
 </script>
 
 <template>
+  <Speech />
   <div class="container mx-auto py-10 px-4 bg-gray-100 dark:bg-gray-900 min-h-screen">
         <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg mb-6">
 
